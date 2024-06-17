@@ -1,6 +1,7 @@
 package com.ohgiraffers.restapi.section03.valid;
 
 import com.ohgiraffers.restapi.section02.responseentity.ResponseMessage;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -53,7 +54,7 @@ public class ValidTestController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<?> regist(@RequestBody UserDTO newUser){
+    public ResponseEntity<?> regist(@Valid @RequestBody UserDTO newUser){
 
         System.out.println("newUser = " + newUser);
 

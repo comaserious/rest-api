@@ -37,11 +37,11 @@ public class UserDTO {
     @NotBlank(message = "아아디는 공백을 허용하지 않습니다")
     private String id;
 
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,10}$\n", message = "대소문자 영어 숫자 포함 8~10 글자여야 합니다")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{8,10}$", message = "대소문자 영어 숫자 포함 8~10 글자여야 합니다")
     private String pwd;
 
     @NotNull(message = "이름은 반드시 입력되어야 합니다")
-    @Min(value = 2, message = "이름은 두 글자  이상이어야 합니다")
+    @Size(min = 2, message = "이름은 두 글자  이상이어야 합니다")
     private String name;
 
     @Past
